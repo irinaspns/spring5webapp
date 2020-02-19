@@ -11,7 +11,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String titel;
+    private String title;
     private String isbn;
 
     @ManyToMany
@@ -25,17 +25,17 @@ public class Book {
     public Book() {
     }
 
-    public Book(String titel, String isbn) {
-        this.titel = titel;
+    public Book(String title, String isbn) {
+        this.title = title;
         this.isbn = isbn;
     }
 
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getIsbn() {
@@ -74,9 +74,8 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", titel='" + titel + '\'' +
+                ", titel='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
-                ", authors=" + authors +
                 ", publisher=" + publisher +
                 '}';
     }
